@@ -5,16 +5,15 @@
 
 using std::ostringstream;
 
+// This is the public Matrix test for which the autograder gives feedback. It
+// only tests VERY FEW of the expected behaviors of the Matrix module. It will
+// only really tell you if your code compiles and you remembered to write the
+// functions. It is not to be trusted. It tells the truth, but not the whole
+// truth. It might put you in a blender. You get the point. You must write your
+// own comprehensive unit tests in Matrix_tests.cpp!
 
-// This is the public Matrix test for which the autograder gives feedback.
-// It only tests VERY FEW of the expected behaviors of the Matrix module.
-// It will only really tell you if your code compiles and you remembered to
-// write the functions. It is not to be trusted. It tells the truth, but not
-// the whole truth. It might put you in a blender. You get the point.
-// You must write your own comprehensive unit tests in Matrix_tests.cpp!
-
-
-TEST(test_matrix_basic) {
+TEST(test_matrix_basic)
+{
   Matrix mat;
   Matrix_init(&mat, 5, 5);
 
@@ -36,7 +35,8 @@ TEST(test_matrix_basic) {
   ASSERT_EQUAL(Matrix_max(&mat), 42);
 }
 
-TEST(test_matrix_print) {
+TEST(test_matrix_print)
+{
   Matrix mat;
   Matrix_init(&mat, 1, 1);
 
